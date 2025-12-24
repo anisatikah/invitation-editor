@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-light text-dark;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  @apply font-bold;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-200;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-secondary;
+}
+
+/* Button Utilities */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-300 cursor-pointer;
+}
+
+.btn-primary {
+  @apply btn bg-primary text-white hover:bg-purple-700 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply btn bg-secondary text-white hover:bg-pink-600 shadow-lg hover:shadow-xl;
+}
+
+.btn-outline {
+  @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white;
+}
+
+/* Card Utilities */
+.card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6;
+}
+
+.card-interactive {
+  @apply card cursor-pointer hover:scale-105 transform transition-transform;
+}
+
+/* Input Styling */
+input[type="text"],
+input[type="email"],
+input[type="color"],
+textarea,
+select {
+  @apply w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus: outline-none focus:border-primary transition-colors;
+}
+
+textarea {
+  @apply resize-vertical;
+}
